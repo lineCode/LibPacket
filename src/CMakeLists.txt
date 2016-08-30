@@ -1,0 +1,36 @@
+add_definitions(-std=c99)
+add_library(libpacket
+            checksum.c
+            checksum.h
+            crc32.h
+            eth.c
+            eth.h
+            ip4.c
+            ip4.h
+            ip6.c
+            ip6.h
+            ipx.c
+            ipx.h
+            mpls.c
+            mpls.h
+            packet.c
+            packet_private.c
+            packet_private.h
+            ppp.c
+            ppp.h
+            pppoe.c
+            pppoe.h
+            raw.c
+            raw.h
+            sctp.c
+            sctp.h
+            spx.c
+            spx.h
+            tcp.c
+            tcp.h
+            udp.c
+            udp.h
+            vlan.c
+            vlan.h)
+include_directories(BEFORE "${CMAKE_SOURCE_DIR}/include") 
+include_directories(BEFORE "${CMAKE_SOURCE_DIR}") 

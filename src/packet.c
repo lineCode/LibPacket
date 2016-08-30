@@ -128,6 +128,8 @@ packet_decode_pcap(Packet *packet, const uint8_t *pkt,
 /*
  * Library routines
  */
+
+#include <packet/libpacket.h>
 static const char packet_version_string[] =
     PACKAGE " version " PACKAGE_VERSION;
 

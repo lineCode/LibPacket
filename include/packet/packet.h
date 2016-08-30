@@ -30,13 +30,14 @@
 #ifndef PACKET_H
 #define PACKET_H
 
-/*
- * Requires C99 types
- */
 #include <stdint.h>
 #include <stdbool.h>
 #include <sys/types.h>
 #include <sys/time.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include <packet/ipaddr.h>
 #include <packet/protocol.h>
@@ -147,5 +148,9 @@ const uint8_t *packet_raw_payload(Packet *packet);
 uint32_t packet_paysize(Packet *packet);
 
 const uint8_t *packet_payload(Packet *packet);
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #endif /* PACKET_H */
